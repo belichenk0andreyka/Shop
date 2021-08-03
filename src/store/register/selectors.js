@@ -7,3 +7,8 @@ export const regFieldValue = createSelector(
     (state, props) => props.field,
     (state, field) => state[field],
 )
+
+export const regData = createSelector(
+    regSelector,
+    ({email, password}) => ({email, password }),
+);
