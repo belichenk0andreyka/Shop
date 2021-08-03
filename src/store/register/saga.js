@@ -4,12 +4,14 @@ import {NotificationManager} from 'react-notifications';
 import { REGISTER_USER } from "./actionTypes";
 import {regData} from "./selectors";
 import {auth} from "../../../firebase";
+import {history} from "../createStore";
 
 export function* registerUser() {
     try {
         const {email, password} = yield select(regData);
         const data = yield call([auth, auth.createUserWithEmailAndPassword], email, password);
         yield call([NotificationManager, NotificationManager.success], 'Success registration');
+        history.push('/auth');
     } catch (e) {
         yield call([NotificationManager, NotificationManager.error], e.message);
     }
