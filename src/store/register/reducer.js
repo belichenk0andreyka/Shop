@@ -1,3 +1,5 @@
+import {CHANGE_REG_INPUT} from "./actionTypes";
+
 const initialState = {
     email: '',
     password: '',
@@ -5,5 +7,13 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-    return state;
+    switch (action.type) {
+        case CHANGE_REG_INPUT:
+            return {
+                ...state,
+                [action.payload.field]: action.payload.value,
+            };
+        default:
+            return state;
+    }
 };

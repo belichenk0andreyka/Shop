@@ -10,6 +10,8 @@ import ProductsPage from "./components/ProductsPage";
 import ProductsEdit from "./components/ProductsEdit/ProductsPage";
 import ProductsAdd from "./components/ProductsAdd/ProductsPage";
 
+import './index.less';
+
 
 const App = () => {
     return (
