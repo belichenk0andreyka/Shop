@@ -12,7 +12,7 @@ export function* authUser() {
         const data = yield call([auth, auth.signInWithEmailAndPassword], email, password);
         console.log('data', data);
         yield call([NotificationManager, NotificationManager.success], 'Success auth');
-        history.push('/auth');
+        history.push('/products');
     } catch (e) {
         yield call([NotificationManager, NotificationManager.error], e.message);
     }
