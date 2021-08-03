@@ -1,8 +1,4 @@
 node_modules
+.idea
 yarn.lock
 package-lock.json
-.idea
-.next
-dist
-yarn-error.log
-next-env.d.ts
