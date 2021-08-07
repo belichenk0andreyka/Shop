@@ -1,4 +1,8 @@
-import {CHANGE_PRODUCTS_ACTIONS_FIELD} from "./actionTypes";
+import {
+    SET_START_PRODUCT_DATA,
+    CLEAN_PRODUCTS_ACTIONS,
+    CHANGE_PRODUCTS_ACTIONS_FIELD,
+} from "./actionTypes";
 
 const initialState = {
     title: '',
@@ -15,6 +19,13 @@ export default (state = initialState, action) => {
                 ...state,
                 [action.payload.field]: action.payload.value,
             };
+        case SET_START_PRODUCT_DATA:
+            return {
+                ...state,
+                ...action.payload,
+            };
+        case CLEAN_PRODUCTS_ACTIONS:
+            return initialState;
         default:
             return state;
     }

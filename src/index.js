@@ -24,7 +24,7 @@ const App = () => {
                     <Route path="/auth" component={Login} />
                     <Route exact path="/" component={Register} />
                     <Route path="/products" component={ProductsPage} />
-                    <Route path="/products-edit" component={() => <ProductsActions action='edit' />} />
+                    <Route path="/products-edit/:id" component={() => <ProductsActions action='edit' />} />
                     <Route path="/products-add" component={() => <ProductsActions action='add' />} />
                 </ConnectedRouter>
             </BrowserRouter>

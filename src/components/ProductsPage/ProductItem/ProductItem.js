@@ -1,13 +1,15 @@
 import React from 'react';
 import dayjs from "dayjs";
 import classNames from "classnames";
+import {withRouter} from "react-router-dom";
 
 import Button from "../../custom/Button";
 import {getPriceWithDiscount} from "../../../helpers/discountHelpers";
 
 import './ProductItem.less';
 
-const ProductItem = ({ product, deleteProduct }) => {
+const ProductItem = ({ product, deleteProduct, history }) => {
+    const handleRedirectEdit = () => history.push(`/products-edit/${product.id}`)
     const priceWithDiscount = getPriceWithDiscount(product);
     const handleDelete = () => deleteProduct(product.id);
     return (
@@ -22,7 +24,7 @@ const ProductItem = ({ product, deleteProduct }) => {
             </div>
             <div className='product_btn'>
                 <Button
-                    onClick={() => {}}
+                    onClick={handleRedirectEdit}
                     text='Edit'
                 />
                 <Button
@@ -34,4 +36,4 @@ const ProductItem = ({ product, deleteProduct }) => {
     );
 };
 
-export default ProductItem;
+export default withRouter(ProductItem);

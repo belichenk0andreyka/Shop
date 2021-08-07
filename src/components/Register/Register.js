@@ -1,11 +1,13 @@
 import React from 'react';
+import {withRouter} from "react-router-dom";
 
 import Button from "../custom/Button";
 import RegisterInput from "./RegisterInput";
 
 import './Register.less';
 
-const Register = ({ registerUser }) => {
+const Register = ({ registerUser, history }) => {
+    const handleRedirectLogin = React.useCallback(() => history.push('/auth'), []);
     return (
         <div className='auth-wrapper'>
             <div className='auth'>
@@ -30,6 +32,10 @@ const Register = ({ registerUser }) => {
                 />
                 <div className='auth-btn'>
                     <Button
+                        onClick={handleRedirectLogin}
+                        text='To auth'
+                    />
+                    <Button
                         onClick={registerUser}
                         text='Register'
                     />
@@ -39,4 +45,4 @@ const Register = ({ registerUser }) => {
     );
 }
 
-export default Register;
+export default withRouter(Register);

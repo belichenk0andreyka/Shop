@@ -7,7 +7,16 @@ import ProductsActionsInput from "./ProductsActionsInput";
 
 import './ProductsActions.less';
 
-const ProductsActions = ({ action, handleAction, history }) => {
+const ProductsActions = ({ action, handleAction, history, getOneProduct, match }) => {
+
+    React.useEffect(() => {
+        if (action === 'edit') {
+            getOneProduct(match.params.id);
+        }
+    }, []);
+
+    const handleWorkAction = () => handleAction(match.params.id);
+
     const handleRedirect = () => history.push('/products');
     return (
         <div className='productsActions_wrapper'>
@@ -50,7 +59,7 @@ const ProductsActions = ({ action, handleAction, history }) => {
                         text='To Main Page'
                     />
                     <Button
-                        onClick={handleAction}
+                        onClick={handleWorkAction}
                         text={`${action} Product`}
                     />
                 </div>
