@@ -1,0 +1,62 @@
+{
+  "products": [
+    {
+      "id":1,
+      "title": "Хлеб",
+      "description": "Очень вкусный хлеб",
+      "price": 999,
+      "discount": 10,
+      "date": 1628812800000
+    },
+    {
+      "id": 2,
+      "title": "Масло",
+      "description": "Масло сливочное",
+      "price": 1000,
+      "discount": 25,
+      "date": 1628726400000
+    },
+    {
+      "id": 3,
+      "title": "Кальян",
+      "description": "Кальян хороший",
+      "price": 1100,
+      "discount": 30,
+      "date": 1628726400000
+    },
+    {
+      "id": 4,
+      "title": "Колбаса",
+      "description": "Колбаса мясная",
+      "price": 500,
+      "discount": 25,
+      "date": 1628726400000
+    },
+    {
+      "id": 5,
+      "title": "Чашка",
+      "description": "Чашка стекляная",
+      "price": 400
+    },
+    {
+      "id": 6,
+      "title": "Рулетка",
+      "description": "Рулетка длиная",
+      "price": 100
+    },
+    {
+      "id": 7,
+      "title": "Колонка",
+      "description": "Колонка громкая",
+      "price": 6500,
+      "discount": 45,
+      "date": 1628726400000
+    },
+    {
+      "id": 8,
+      "title": "Песня",
+      "description": "Песня треповая",
+      "price": 10000
+    }
+  ]
+}

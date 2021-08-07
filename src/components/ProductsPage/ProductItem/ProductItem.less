@@ -1,0 +1,38 @@
+.product {
+  background: #2D3036;
+  margin: 15px;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &_image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .discount_price {
+    text-decoration: line-through;
+  }
+
+  p, h2 {
+    padding: 3px 0 3px;
+    color: #F6F8F8;
+  }
+
+  &_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    & button {
+      width: 50%;
+    }
+
+    & button:first-child {
+      margin-right: 10px;
+    }
+  }
+}

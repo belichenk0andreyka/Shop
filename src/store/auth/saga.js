@@ -10,9 +10,8 @@ export function* authUser() {
     try {
         const {email, password} = yield select(authData);
         const data = yield call([auth, auth.signInWithEmailAndPassword], email, password);
-        console.log('data', data);
         yield call([NotificationManager, NotificationManager.success], 'Success auth');
-        history.push('/products');
+        yield call([history, history.push], '/products');
     } catch (e) {
         yield call([NotificationManager, NotificationManager.error], e.message);
     }

@@ -8,11 +8,10 @@ import { ConnectedRouter } from 'connected-react-router'
 import Login from "./components/Login";
 import Register from "./components/Register";
 import ProductsPage from "./components/ProductsPage";
-import ProductsEdit from "./components/ProductsEdit/ProductsPage";
-import ProductsAdd from "./components/ProductsAdd/ProductsPage";
+import ProductsActions from "./components/ProductsActions";
 
 import store from "./store/createStore";
-import {history} from "./store/createStore";
+import { history } from "./store/createStore";
 
 import 'react-notifications/lib/notifications.css';
 import './index.less';
@@ -25,8 +24,8 @@ const App = () => {
                     <Route path="/auth" component={Login} />
                     <Route exact path="/" component={Register} />
                     <Route path="/products" component={ProductsPage} />
-                    <Route path="/products-edit" component={ProductsEdit} />
-                    <Route path="/products-add" component={ProductsAdd} />
+                    <Route path="/products-edit" component={() => <ProductsActions action='edit' />} />
+                    <Route path="/products-add" component={() => <ProductsActions action='add' />} />
                 </ConnectedRouter>
             </BrowserRouter>
             <NotificationContainer/>

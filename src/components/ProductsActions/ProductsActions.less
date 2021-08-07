@@ -1,0 +1,37 @@
+.productsActions_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: #22262B;
+
+  .productsActions {
+    background: #2D3036;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #24272D;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_title {
+      color: #F6F8F8;
+      text-align: center;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    &_btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+
+      & .btn:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
